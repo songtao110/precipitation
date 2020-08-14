@@ -1,4 +1,4 @@
-package me.ele.lpd.fnpt.xxx.util;
+package com.xxx.util;
 
 import java.net.InetAddress;
 
