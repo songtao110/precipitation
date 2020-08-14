@@ -1,4 +1,4 @@
-package me.ele.lpd.fnpt.xxx.util;
+package com.xxx.util;
 
 import java.io.IOException;
 import java.util.Collections;
@@ -11,9 +11,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import lombok.experimental.UtilityClass;
-import me.ele.elog.Log;
-import me.ele.elog.LogFactory;
-import me.ele.lpd.fnpt.xxx.api.common.exception.XxxException;
+import com.xxx.api.common.exception.XxxException;
 import org.apache.commons.lang3.StringUtils;
 
 /**
