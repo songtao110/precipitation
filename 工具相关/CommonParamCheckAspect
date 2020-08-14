@@ -1,0 +1,52 @@
+@Component
+@Aspect
+@Order(2)
+@Slf4j
+public class CommonParamCheckAspect {
+    @Around("execution(* com.xxx.api..*Service.*(..))")
+    public Object paramCheckAround(ProceedingJoinPoint joinPoint) throws Throwable {
+        Object[] args = null;
+        Object result = null;
+        MethodSignature methodSignature = (MethodSignature) joinPoint.getSignature();
+        String methodName =
+                methodSignature.getDeclaringType().getSimpleName()
+                        + "#"
+                        + methodSignature.getMethod().getName();
+        try {
+            args = joinPoint.getArgs();
+            LoggerUtils.info(log, "{}入参:={}", methodName, JsonUtil.generateNoException(args));
+            if (args == null || args.length == 0) {
+                return joinPoint.proceed();
+            }
+            ValidationUtils.ValidationResult validationResult = null;
+            for (Object o : args) {
+                validationResult = ValidationUtils.validateEntity(o);
+                if (validationResult.isHasErrors()) {
+                    break;
+                }
+            }
+            if (validationResult.isHasErrors()) {
+                LoggerUtils.info(
+                        log,
+                        methodName + "参数校验异常:={}",
+                        JsonUtil.generateNoException(validationResult.getErrorMsg()));
+                throw new XxxException(
+                        ErrorCodeEnum.PARAMS_ERROR.getCode(),
+                        validationResult.getErrorMsg().entrySet().iterator().next().getValue());
+            }
+            result = joinPoint.proceed();
+        } catch (XxxException e) {
+            if (CommonResponse.class.isAssignableFrom(methodSignature.getReturnType())) {
+                return CommonResponse.generateResponse(
+                        Integer.valueOf(e.getCode()), e.getMessage());
+            }
+            throw e;
+        } catch (Exception e) {
+            LoggerUtils.error(log, "{}入参:={}", methodName, JsonUtil.generateNoException(args), e);
+            throw e;
+        } finally {
+            LoggerUtils.info(log, "{}出参:={}", methodName, JsonUtil.generateNoException(result));
+        }
+        return result;
+    }
+}
