@@ -1,0 +1,25 @@
+@Inherited
+@Retention(RetentionPolicy.RUNTIME)
+@Target({ElementType.METHOD})
+public @interface XxxAnnotation {
+}
+
+@Component
+@Aspect
+@Order(3)
+@Slf4j
+public class AeolusAuthAspect
+    @Pointcut("@annotation(xxx.aop.XxxAnnotation)")
+    private void cutRecord() {
+    }
+
+    @Around("cutRecord()")
+    public Object record(ProceedingJoinPoint point) throws Throwable {
+        //获取切点类，方法，注解等
+        Class<?> clazz = point.getTarget().getClass();
+        MethodSignature ms = (MethodSignature)point.getSignature();
+        Object[] args = point.getArgs();
+        String methodName = clazz.getSimpleName() + "_" + ms.getName();
+        Object proceed = null; 
+     }
+}
