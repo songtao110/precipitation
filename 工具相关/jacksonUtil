@@ -1,0 +1,198 @@
+package me.ele.lpd.fnpt.xxx.util;
+
+import java.io.IOException;
+import java.util.Collections;
+import java.util.Map;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.core.JsonParser.Feature;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.*;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+import lombok.experimental.UtilityClass;
+import me.ele.elog.Log;
+import me.ele.elog.LogFactory;
+import me.ele.lpd.fnpt.xxx.api.common.exception.XxxException;
+import org.apache.commons.lang3.StringUtils;
+
+/**
+ * Json 序列化工具
+ *
+ * @see ObjectMapper
+ */
+@UtilityClass
+public class JsonUtil {
+
+    public final TypeReference<Map<String, Object>> MAP_TYPE_REF = new TypeReference<Map<String, Object>>() {};
+
+    private final Log logger = LogFactory.getLog(JsonUtil.class);
+    private final ObjectMapper mapper = new ObjectMapper();
+
+    static {
+        // 解决实体未包含字段反序列化时抛出异常
+        mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+
+        // 对于空的对象转json的时候不抛出错误
+        mapper.disable(SerializationFeature.FAIL_ON_EMPTY_BEANS);
+
+        // 允许属性名称没有引号
+        mapper.configure(Feature.ALLOW_UNQUOTED_FIELD_NAMES, true);
+
+        // 允许单引号
+        mapper.configure(Feature.ALLOW_SINGLE_QUOTES, true);
+
+        // Include.NON_EMPTY 属性为 空（""） 或者为 NULL 都不序列化，则返回的json是没有这个字段的。这样对移动端会更省流量
+        mapper.setSerializationInclusion(JsonInclude.Include.NON_EMPTY);
+
+        // LocalDateTime 的序列化
+        mapper.registerModule(new JavaTimeModule());
+        mapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
+    }
+
+    /**
+     * Serialize any Java value as a String
+     *
+     * @param object
+     * @return
+     * @throws XxxException
+     */
+    public String generate(Object object) throws XxxException {
+        try {
+            return mapper.writeValueAsString(object);
+        } catch (JsonProcessingException e) {
+            logger.error("JsonUtil.generate failed", e);
+            throw new XxxException("json序列化失败");
+        }
+    }
+
+    /**
+     * Serialize any Java value as a String without exceptions
+     *
+     * @param object
+     * @return
+     */
+    public String generateNoException(Object object) {
+        try {
+            return mapper.writeValueAsString(object);
+        } catch (JsonProcessingException e) {
+            logger.error("JsonUtil.generateNoException failed", e);
+            return null;
+        }
+    }
+
+    /**
+     * Deserialize JSON content from given JSON content String
+     *
+     * @param content
+     * @param valueType
+     * @param <T>
+     * @return
+     * @throws XxxException
+     */
+    public <T> T parse(String content, Class<T> valueType) throws XxxException {
+        try {
+            return mapper.readValue(content, valueType);
+        } catch (IOException e) {
+            logger.error("JsonUtil.parse failed", e);
+            throw new XxxException("json反序列化失败");
+        }
+    }
+
+    /**
+     * Deserialize JSON content from given JSON content String
+     *
+     * @param content
+     * @param typeReference
+     * @param <T>
+     * @return
+     * @throws XxxException
+     */
+    public <T> T parse(String content, TypeReference<T> typeReference) throws XxxException {
+        try {
+            return mapper.readValue(content, typeReference);
+        } catch (IOException e) {
+            logger.error("JsonUtil.parse failed", e);
+            throw new XxxException("json反序列化失败");
+        }
+    }
+
+    /**
+     * Deserialize JSON content from given JSON content String without exceptions
+     *
+     * @param content
+     * @param valueType
+     * @param <T>
+     * @return
+     */
+    public <T> T parseNoException(String content, Class<T> valueType) {
+        if (StringUtils.isEmpty(content)) {
+            return null;
+        }
+        try {
+            return mapper.readValue(content, valueType);
+        } catch (IOException e) {
+            logger.error("JsonUtil.parseNoException failed", e);
+            return null;
+        }
+    }
+
+    /**
+     * Deserialize JSON content from given JSON content String without exceptions
+     *
+     * @param content
+     * @param typeReference
+     * @param <T>
+     * @return
+     */
+    public <T> T parseNoException(String content, TypeReference<T> typeReference) {
+        if (StringUtils.isEmpty(content)) {
+            return null;
+        }
+        try {
+            return mapper.readValue(content, typeReference);
+        } catch (IOException e) {
+            logger.error("JsonUtil.parseNoException failed", e);
+            return null;
+        }
+    }
+
+    /**
+     * Convert object to map
+     *
+     * @param object
+     * @return
+     */
+    public Map<String, Object> toMap(Object object) throws XxxException {
+        try {
+            return mapper.convertValue(object, MAP_TYPE_REF);
+        } catch (Exception e) {
+            logger.error("JsonUtil.toMap failed", e);
+            throw new XxxException("对象转化为map");
+        }
+    }
+
+    /**
+     * Convert object to map without exceptions
+     *
+     * @param object
+     * @return
+     */
+    public Map<String, Object> toMapNoException(Object object) {
+        try {
+            return mapper.convertValue(object, MAP_TYPE_REF);
+        } catch (Exception e) {
+            logger.error("JsonUtil.toMapNoException failed", e);
+            return Collections.emptyMap();
+        }
+    }
+
+    /**
+     * Get internal Jackson ObjectMapper
+     *
+     * @return
+     */
+    public ObjectMapper mapper() {
+        return mapper;
+    }
+}
