@@ -1,0 +1,31 @@
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer;
+import org.springframework.amqp.rabbit.listener.adapter.MessageListenerAdapter;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.*;
+
+/**
+ * 适配器的方式来初始化MaxQ消息监听器
+ * 这样更自由
+ */
+@Slf4j
+@Profile("maxq")
+@Configuration
+public class MaxqListenerConfig {
+
+    @Bean("wsMessagePushListener")
+    public MessageListenerAdapter wsMessagePushListener(WsMessagePushConsumer wsMessagePushConsumer) {
+        return new MessageListenerAdapter(wsMessagePushConsumer, "onMessage");
+    }
+
+    @Bean("wsMessagePushListenerContainer")
+    public SimpleMessageListenerContainer orderShowMessageListenerContainer(@Qualifier("cachingConnectionFactory")
+        CachingConnectionFactory connectionFactory,
+        @Qualifier("wsMessagePushListener") MessageListenerAdapter listenerAdapter) {
+        SimpleMessageListenerContainer container = new SimpleMessageListenerContainer();
+        container.setConnectionFactory(connectionFactory);
+        container.setQueueNames(MaxQInfraInitConfig.WS_MESSAGE_PUSH_QUEUE_NAME);
+        container.setMessageListener(listenerAdapter);
+        return container;
+    }
+}
