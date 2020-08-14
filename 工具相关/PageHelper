@@ -1,0 +1,14 @@
+  @Bean(name = "sqlSessionFactory")
+    public SqlSessionFactory sqlSessionFactory() throws Exception {
+        SqlSessionFactoryBean factory = new SqlSessionFactoryBean();
+        factory.setDataSource(dataSource());
+        factory.setVfs(SpringBootVFS.class);
+        PageInterceptor interceptor = new PageInterceptor();
+        Properties map = new Properties();
+        map.put("helperDialect","mysql");
+        map.put("reasonable","false");
+        interceptor.setProperties(map);
+        Interceptor[] plugins = new Interceptor[]{ interceptor };
+        factory.setPlugins(plugins);
+        return factory.getObject();
+    }
