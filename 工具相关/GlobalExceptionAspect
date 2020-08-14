@@ -1,0 +1,23 @@
+@Component
+@Aspect
+@Order(10)
+@Slf4j
+public class GlobalExceptionAspect {
+    @Around(value = "within(com.xxx..*) && !execution(* com.xxx.bbb.*.*(..))")
+    public Object globalExceptionAround(ProceedingJoinPoint joinPoint) throws Throwable {
+        Object result;
+        Object[] args = null;
+        try {
+            args = joinPoint.getArgs();
+            result = joinPoint.proceed();
+        } catch (XxxException e) {
+            //TODO 埋点 发送告警
+        } catch (Exception e) {
+            //TODO 埋点 发送告警
+            throw e;
+        } finally {
+            // do nothing
+        }
+        return result;
+    }
+}
