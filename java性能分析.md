@@ -1,5 +1,6 @@
 ## jvm
 [1.手把手教你定位常见Java性能问题](https://github.com/Snailclimb/JavaGuide/blob/master/docs/java/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E5%AE%9A%E4%BD%8D%E5%B8%B8%E8%A7%81Java%E6%80%A7%E8%83%BD%E9%97%AE%E9%A2%98.md)
+
 2.java常见的CPU密集型操作
 1)、频繁的GC; 如果访问量很高，可能会导致频繁的GC甚至FGC。当调用量很大时，内存分配将如此之快以至于GC线程将连续执行，这将导致CPU飙升。
 2)、序列化和反序列化。稍后将给出一个示例：当程序执行xml解析时，调用量会增加，从而导致CPU变满。
