@@ -21,3 +21,6 @@
   search_after 的方式（>= 5.0），支持实时数据，search_after 适用于深度分页+ 排序，不支持跳页。
   其实和目前 moa 内存中使用rbtree 分页的原理
 ```
+
+## 2.原理
+[Elasticsearch基本概念和索引原理](https://juejin.cn/post/6897815686802833416?utm_source=gold_browser_extension)
