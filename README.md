@@ -11,3 +11,12 @@ Netty(对外内存、0拷贝)
 Go
 ```
 [零拷贝](https://mp.weixin.qq.com/s/tbcQGVXC1B8S7H8BwN9HbQ)
+```
+mmap
+sendfile
+java(MappedByteBuffer、map方法、DirectByteBuffer、
+FileChannel.transferTo:允许将一个通道交叉连接到另一个通道，而不需要一个中间缓冲区来传递数据； 
+注：这里不需要中间缓冲区有两层意思：
+第一层不需要用户空间缓冲区来拷贝内核缓冲区，
+另外一层两个通道都有自己的内核缓冲区，两个内核缓冲区也可以做到无需拷贝数据)
+```
