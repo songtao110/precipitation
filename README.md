@@ -10,3 +10,4 @@ Netty(对外内存、0拷贝)
 [gc的语言](https://blog.csdn.net/big_white_py/article/details/107623488)
 Go
 ```
+[零拷贝](https://mp.weixin.qq.com/s/tbcQGVXC1B8S7H8BwN9HbQ)
