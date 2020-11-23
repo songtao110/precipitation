@@ -1,5 +1,7 @@
 ## 1.ES性能优化
 
+[理解Elasticsearch和面试总结](https://mp.weixin.qq.com/s?__biz=MzAwNjQwNzU2NQ==&mid=2650345870&idx=1&sn=a266d67f1b34db3e0aa4cba8f375bc56&chksm=8300656cb477ec7a4735c3ec47712bb20794335abc1b9fd1d00e5a142361747145e5518ec8bf&scene=132#wechat_redirect)
+
 1).理解filesystem cache
 需要控制索引字段的数量，只存储用来搜索的那些字段，其他全量的数据可能放在Hbase或者MySQL里
 
