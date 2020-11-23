@@ -20,3 +20,16 @@ FileChannel.transferTo:允许将一个通道交叉连接到另一个通道，而
 第一层不需要用户空间缓冲区来拷贝内核缓冲区，
 另外一层两个通道都有自己的内核缓冲区，两个内核缓冲区也可以做到无需拷贝数据)
 ```
+TCP
+
+[TCP协议简介](http://www.ruanyifeng.com/blog/2017/06/tcp-protocol.html)
+
+![协议分层](http://www.ruanyifeng.com/blogimg/asset/201205/bg2012052913.png)
+
+![TCP协议包大小](http://www.ruanyifeng.com/blogimg/asset/2017/bg20170060810.png)
+
+**TCP数据包的组装:** 操作系统层面来处理TCP数据包，数据包里面有对应的端口，操作系统把数据转发给对应端口的进程来处理数据包
+**慢启动和ACK:** TCP 协议为了做到效率与可靠性的统一，设计了一个慢启动（slow start）机制。开始的时候，发送得较慢，
+然后根据丢包的情况，调整速率：如果不丢包，就加快发送速度；如果丢包，就降低发送速度
+
+
