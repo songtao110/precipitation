@@ -6,6 +6,8 @@
 
 4.[三歪连MVCC和事务隔离级别的关系都不知道](https://mp.weixin.qq.com/s/0-YEqTMd0OaIhW99WqavgQ)
 
+5.[MySQL 是怎么死锁的?](https://mp.weixin.qq.com/s/wwe07uJ0N1Hk6ZQyGsCkHA)
+
 ## 5.日志
 ### binlog
 是数据库server层面基于sql语句层面记录的日志，数据库改变事件，包括事件发生的时间、开始位置、结束位置等信息。
