@@ -26,6 +26,7 @@ mvcc的实现原理
 - DB_ROLL_PTR — 指向改行对应的 undolog 的指针
 - DB_ROW_ID — 单调递增的行 ID，他就是 AUTO_INCREMENT 的主键 ID
 ![MVCC](https://mmbiz.qpic.cn/mmbiz_jpg/VtlKaFJha2V0GUGShWFd8W5MZrfkvQ1D11qkTqib4FdpfGomm0DflSvmF5xL1WnsTdtwJLEWo2aLqs1x3vH46qQ/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+[MVCC实现原理](https://mp.weixin.qq.com/s/rKYpQp4JPZL2q5p41f6V6Q)
 
 #### 快照度
 当前事务的事务ID和该条记录的DB_TRX_ID比较，如果小于或者早于该条记录的DB_TRX_ID，就说明当前事务开启后提交的，需要拿着DB_ROLL_PTR到undolog日志中读取数据。
