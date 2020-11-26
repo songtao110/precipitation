@@ -11,9 +11,17 @@ Netty(对外内存、0拷贝)
 Go
 ```
 [零拷贝](https://mp.weixin.qq.com/s/tbcQGVXC1B8S7H8BwN9HbQ)
+
+[什么是零拷贝？mmap与sendFile的区别是什么？](https://www.cnblogs.com/ericli-ericli/articles/12923420.html)
+
 ```
-mmap
-sendfile
+- mmap：就是在用户的虚拟地址空间中寻找空闲的一段地址进行对文件的操作，不必再调用read、write系统调用，
+它的最终目的是将磁盘中的文件映射到用户进程的虚拟地址空间，实现用户进程对文件的直接读写，减少了文件复制的开销，提高了用户的访问效率
+
+- sendfile：自内核版本号2.1，引进了sendfile2.4之后，sendfile实现了更简单的方式，不同之处在于，
+文件到达内核缓冲区后，不必再将数据全部复制到socket buffer缓冲区，而只将记录数据位置和长度相关的数据保存到socket buffer，
+而数据实际由DMA模块直接发送给协议相关引擎，再次降低了复制操作。
+
 java(MappedByteBuffer、map方法、DirectByteBuffer、
 FileChannel.transferTo:允许将一个通道交叉连接到另一个通道，而不需要一个中间缓冲区来传递数据； 
 注：这里不需要中间缓冲区有两层意思：
