@@ -6,6 +6,7 @@
 [spring-boot1.5.13.RELEASE](https://docs.spring.io/spring-boot/docs/1.5.13.RELEASE/reference/)、
 [spring-boot/docs/application-properties](https://docs.spring.io/spring-boot/docs/current/reference/html/appendix-application-properties.html)、
 [arthas](https://arthas.aliyun.com/doc/jvm.html)、
+[java工程师成神之路](http://hollischuang.gitee.io/tobetopjavaer/#/)
 ## 技术沉淀
 
 ### 迅速脑补
