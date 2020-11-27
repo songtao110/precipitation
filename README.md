@@ -1,4 +1,11 @@
 # precipitation
+## 官网地址
+[mybatis](http://mybatis.org/spring/zh/index.html)、
+[springcloud](https://www.springcloud.cc/)、
+[springboot.fun](http://springboot.fun/)、
+[spring-boot1.5.13.RELEASE](https://docs.spring.io/spring-boot/docs/1.5.13.RELEASE/reference/)、
+[spring-boot/docs/application-properties](https://docs.spring.io/spring-boot/docs/current/reference/html/appendix-application-properties.html)、
+[arthas](https://arthas.aliyun.com/doc/jvm.html)、
 ## 技术沉淀
 
 ### 迅速脑补
