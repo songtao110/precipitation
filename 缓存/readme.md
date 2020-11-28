@@ -41,6 +41,9 @@ C 语言实现，一般来说，C 语言实现的程序“距离”操作系统�
 ```
 ![客户端与 Redis 的一次通信过程](https://doocs.gitee.io/advanced-java/docs/high-concurrency/images/redis-single-thread-model.png)
 
-## [源码阅读指引](https://github.com/huangz1990/redis-3.0-annotated)
+## redis设计与实现
+[redis设计与实现](http://redisbook.com/)
 
-## [《Redis 设计与实现》图片集](http://1e-gallery.redisbook.com/)
+[源码阅读指引](https://github.com/huangz1990/redis-3.0-annotated)
+
+[《Redis 设计与实现》图片集](http://1e-gallery.redisbook.com/)
