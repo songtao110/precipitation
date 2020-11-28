@@ -35,3 +35,4 @@ C 语言实现，一般来说，C 语言实现的程序“距离”操作系统�
 ```
 连接应答处理器、命令请求处理器、命令回复处理器、特别为复制功能编写的复制处理器
 ```
+![客户端与 Redis 的一次通信过程](https://doocs.gitee.io/advanced-java/docs/high-concurrency/images/redis-single-thread-model.png)
