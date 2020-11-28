@@ -18,3 +18,13 @@ C 语言实现，一般来说，C 语言实现的程序“距离”操作系统�
 **IO多路复用程序通过队列实现有序、同步、one-one的向文件事件分配器传送套接字**
 
 ![IO多路复用程序通过队列实现有序、同步、one-one的向文件事件分配器传送套接字](http://redisbook.com/_images/graphviz-f4835e5b07c5a6ab04e09dc8d887d62a1854ac94.png)
+
+**IO多路复用程序**
+
+![IO多路复用程序](http://redisbook.com/_images/graphviz-840bfb6ea3cc590829fecd9b9062002d59dbf673.png)
+
+**事件类型**
+| 事件类型 | 客户端对套接字的操作 |
+| --- | --- |
+| ae.h/AE_READABLE | write、close、connectread |
+| ae.h/AE_WRITABLE | read |
