@@ -52,3 +52,5 @@
 
 简单的查询、运营、统计类的查询可以使用，es本身可以加机器扩容抗住高并发。
 
+## [12306架构到底是不是国内最牛逼的架构](https://mp.weixin.qq.com/s/wGql4KPJ_4LZse5ExUktxw)
+
