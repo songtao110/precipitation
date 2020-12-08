@@ -24,3 +24,5 @@
 
 ## 2.原理
 [Elasticsearch基本概念和索引原理](https://juejin.cn/post/6897815686802833416?utm_source=gold_browser_extension)
+
+![写索引流程](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/693731cfa5234a4fa88a73ca69ee17ab~tplv-k3u1fbpfcp-zoom-1.image)
