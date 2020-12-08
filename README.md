@@ -48,4 +48,5 @@ TCP
 **慢启动和ACK:** TCP 协议为了做到效率与可靠性的统一，设计了一个慢启动（slow start）机制。开始的时候，发送得较慢，
 然后根据丢包的情况，调整速率：如果不丢包，就加快发送速度；如果丢包，就降低发送速度
 
+![半连接队列和全连接队列](https://mmbiz.qpic.cn/mmbiz_png/J0g14CUwaZe13EKxzbTjoNXgLvlUzWbRWJSRmWDex2X5oF3yAHrs9gIGSRMSjeRV3IWZJGuT8jMMfZSYJ1gUNg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
 
