@@ -57,3 +57,5 @@ Netty
 [Netty工作原理](https://juejin.cn/post/6844904008453210119)
 
 ![主从 Rreactor 多线程模型](https://user-gold-cdn.xitu.io/2019/12/5/16ed52a8f958f552?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
+
+[Netty 实战精髓篇](https://www.w3cschool.cn/essential_netty_in_action/)
