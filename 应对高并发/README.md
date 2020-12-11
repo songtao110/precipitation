@@ -54,3 +54,5 @@
 
 ## [12306架构到底是不是国内最牛逼的架构](https://mp.weixin.qq.com/s/wGql4KPJ_4LZse5ExUktxw)
 
+## [java秒杀](https://github.com/todorex/miaosha)
+
