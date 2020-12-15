@@ -5,3 +5,5 @@
 3.[Java中9种常见的CMS GC问题分析与解决](https://mp.weixin.qq.com/s/RFwXYdzeRkTG5uaebVoLQw)
 
 4.[CMS GC 新生代默认是多大](https://blog.csdn.net/a479898045/article/details/96074734)
+
+5.[CMS](https://blog.csdn.net/u010013573/article/details/88782757)
