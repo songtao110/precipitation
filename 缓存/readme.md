@@ -47,3 +47,5 @@ C 语言实现，一般来说，C 语言实现的程序“距离”操作系统�
 [源码阅读指引](https://github.com/huangz1990/redis-3.0-annotated)
 
 [《Redis 设计与实现》图片集](http://1e-gallery.redisbook.com/)
+
+[从应用到底层 36张图带你进入Redis世界](https://juejin.cn/post/6906680666214105102?utm_source=gold_browser_extension)
