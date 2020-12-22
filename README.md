@@ -61,3 +61,5 @@ Netty
 ![主从 Rreactor 多线程模型](https://user-gold-cdn.xitu.io/2019/12/5/16ed52a8f958f552?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
 
 [Netty 实战精髓篇](https://www.w3cschool.cn/essential_netty_in_action/)
+
+[入门Netty](https://juejin.cn/post/6896622400215220231)
