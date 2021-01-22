@@ -49,6 +49,7 @@ mvcc的实现原理
 **但如果当前事务更新到了其他事务新插入并提交了的数据，这就会造成该行数据的 DB_TRX_ID 被更新为当前事务 ID，此后即便进行快照读，依然会查出该行数据，产生幻读**（其他事务插入或删除但未提交该行数据的情况下会锁定该行，造成当前事务对该行的更新操作被阻塞，所以这种情况不会产生幻读问题，有关事务间的锁，不在本篇文章的讨论范围内，接下来的文章我们会进一步讨论）
 
 ## 主从同步
+![数据同步](https://mmbiz.qpic.cn/mmbiz_png/g6hBZ0jzZb3oUu0s19gjqIkJT0efFicN3Jut5BY0os6oCa57pYhgELKWXkKsvO5B2qreKG97At8zzibYwoUo8juw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
 ### 主从同步出现的原因是：
 从库拷贝主库binlog日志并且串行化执行，在高并发场景下，从库的数据是有延迟的，主库宕机器，还没有同步binlog日志到从库有可能丢失数据。
 ### 解决方案
