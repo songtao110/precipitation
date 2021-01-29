@@ -20,3 +20,5 @@
     从实现角度，资源库、工厂的粒度应该和聚合的粒度一致，代码结构和部署结构也可以和聚合对齐。实现和领域模型保持一致，
     这也是领域驱动设计作为正确的 OO 的目标和价值所在。
   ```
+  3.COLA
+  [COLA](https://blog.csdn.net/significantfrank/article/details/110934799)
