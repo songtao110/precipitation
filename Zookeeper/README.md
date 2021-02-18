@@ -5,3 +5,4 @@
 总结Paxos两阶段提交:
 两个阶段分别是准备（prepare）和提交（commit）
 ```
+[Raft协议](https://juejin.cn/post/6863126548120076301)
