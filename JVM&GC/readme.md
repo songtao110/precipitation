@@ -7,3 +7,11 @@
 4.[CMS GC 新生代默认是多大](https://blog.csdn.net/a479898045/article/details/96074734)
 
 5.[CMS](https://blog.csdn.net/u010013573/article/details/88782757)
+
+6.划分内容的方法：
+```
+1).指针碰撞
+2).空闲列表
+解决并发问题：
+CAS、本地线程分配缓冲TLAB -XX:+/-UseTLAB、-XX:TLABSize 
+```
