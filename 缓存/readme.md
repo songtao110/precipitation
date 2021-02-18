@@ -55,3 +55,13 @@ C 语言实现，一般来说，C 语言实现的程序“距离”操作系统�
 
 ## 4.数据编码结构
 ![Redis基本数据类型](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3e11f892646f4f58ab9b6f5d558863cf~tplv-k3u1fbpfcp-watermark.image)
+
+## 5.redis使用技巧
+```
+1.redis cluster架构下怎么让相关的数据落到同一节点上？
+在key最加{hash tag} 。Redis在计算槽编号的时候只会获取{}之间的字符进行槽编号计算。如：set a{aqs}a 1、set a{aqs}b 2
+2.命令统计工具INFO commandstats
+比如命令执行了多少次，执行命令所耗费的毫秒数(每个命令的总时间和平均时间)
+3.如果你的数据很重要，请使用 Try/Except
+5.
+```
