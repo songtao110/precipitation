@@ -52,3 +52,6 @@ C 语言实现，一般来说，C 语言实现的程序“距离”操作系统�
 
 ## redis分布式锁的问题
 [解决Redis分布式锁业务代码超时导致锁失效问题](https://copyfuture.com/blogs-details/20200319225649988yl21w5wqv89z2fj)
+
+## 4.数据编码结构
+![Redis基本数据类型](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3e11f892646f4f58ab9b6f5d558863cf~tplv-k3u1fbpfcp-watermark.image)
