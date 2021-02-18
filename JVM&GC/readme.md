@@ -15,3 +15,5 @@
 解决并发问题：
 CAS、本地线程分配缓冲TLAB -XX:+/-UseTLAB、-XX:TLABSize 
 ```
+7.对象头信息
+![对象头信息](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d71b6b702af4479f8e0185ba70b67fa5~tplv-k3u1fbpfcp-watermark.image)
