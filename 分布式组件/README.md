@@ -7,3 +7,6 @@ Google Dapper论文
 [Skywalking源码](https://zhuanlan.zhihu.com/p/110933177)
 
 [zipkin、pinpoint](https://www.jianshu.com/p/4fa81b661f55)
+
+### 1.3 javaAgent相关技术
+[javaagent使用指南](https://www.cnblogs.com/rickiyang/p/11368932.html)
