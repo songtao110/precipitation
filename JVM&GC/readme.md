@@ -8,7 +8,7 @@
 
 5.[CMS](https://blog.csdn.net/u010013573/article/details/88782757)
 
-6.划分内容的方法：
+6.划分内存的方法：
 ```
 1).指针碰撞
 2).空闲列表
@@ -18,3 +18,5 @@ CAS、本地线程分配缓冲TLAB -XX:+/-UseTLAB、-XX:TLABSize
 7.对象头信息
 
 ![对象头信息](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d71b6b702af4479f8e0185ba70b67fa5~tplv-k3u1fbpfcp-watermark.image)
+
+8.[JVM小册子](https://juejin.cn/post/6930605141280325639)
