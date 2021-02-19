@@ -18,7 +18,7 @@ CAS、本地线程分配缓冲TLAB -XX:+/-UseTLAB、-XX:TLABSize
 7.对象信息
 
 **Java 对象头**
-
+```
 GC分代信息，锁信息，哈希码，指向Class类元信息的指针
 Hotspot 虚拟机的对象头主要包括两部分数据：Mark Word（标记字段）、Klass Pointer（类型指针）
     - Klass Point 是是对象指向它的类元数据的指针，虚拟机通过这个指针来确定这个对象是哪个类的实例
@@ -31,7 +31,7 @@ Hotspot 虚拟机的对象头主要包括两部分数据：Mark Word（标记字
 **Java 对象对齐填充**   
 
 虚拟机规范要求对象大小必须是8字节的整数倍
-
+```
 ![对象头信息](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d71b6b702af4479f8e0185ba70b67fa5~tplv-k3u1fbpfcp-watermark.image)
 
 8.[JVM小册子](https://juejin.cn/post/6930605141280325639)
