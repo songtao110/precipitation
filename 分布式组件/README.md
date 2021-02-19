@@ -4,4 +4,6 @@ Google Dapper论文
 ### 1.2 对标产品
 [Skywalking](https://mp.weixin.qq.com/s/A9gmNsmuSdrMw8GqgbKa3A)
 
+[Skywalking源码](https://zhuanlan.zhihu.com/p/110933177)
+
 [zipkin、pinpoint](https://www.jianshu.com/p/4fa81b661f55)
