@@ -63,3 +63,5 @@ Netty
 [Netty 实战精髓篇](https://www.w3cschool.cn/essential_netty_in_action/)
 
 [入门Netty](https://juejin.cn/post/6896622400215220231)
+
+[Netty In Action](https://waylau.com/essential-netty-in-action/index.html)
