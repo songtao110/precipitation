@@ -4,4 +4,4 @@
 
 [indexedDB](http://www.ruanyifeng.com/blog/2018/07/indexeddb.html)
 
-3.
+[CORS"跨域资源共享"](http://www.ruanyifeng.com/blog/2016/04/cors.html)
