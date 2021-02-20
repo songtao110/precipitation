@@ -10,3 +10,12 @@ Google Dapper论文
 
 ### 1.3 javaAgent相关技术
 [javaagent使用指南](https://www.cnblogs.com/rickiyang/p/11368932.html)
+
+## 2.分布式监控系统
+### 2.1 prometheus
+```
+主要可以和Kubernetes、Grafana集成
+TSDB(时序数据库)
+```
+### 2.2 Zabbix、Open-Falcon
+[Zabbix、Open-Falcon](https://www.sohu.com/a/342733264_198222)
