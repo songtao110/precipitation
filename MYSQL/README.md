@@ -10,6 +10,8 @@
 
 6.[MySQL相关工具](https://juejin.cn/post/6899306849686781959?utm_source=gold_browser_extension)
 
+7.[分库分表的场景](https://mp.weixin.qq.com/s/oZEkECeBl1zw8eOApH1Vqg)
+
 ## 日志&MVCC
 ### binlog
 是数据库server层面基于sql语句层面记录的日志，数据库改变事件，包括事件发生的时间、开始位置、结束位置等信息。
