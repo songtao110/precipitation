@@ -12,6 +12,8 @@
 
 7.[分库分表的场景](https://mp.weixin.qq.com/s/oZEkECeBl1zw8eOApH1Vqg)
 
+8.[sql优化](https://mp.weixin.qq.com/s/hCHnCHpg4_WaDE39V7OPkg)
+
 ## 日志&MVCC
 ### binlog
 是数据库server层面基于sql语句层面记录的日志，数据库改变事件，包括事件发生的时间、开始位置、结束位置等信息。
