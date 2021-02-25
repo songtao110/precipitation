@@ -14,7 +14,7 @@
 
 8.[sql优化](https://mp.weixin.qq.com/s/hCHnCHpg4_WaDE39V7OPkg)
 
-9.[MySql优化之show profile分析SQL](https://zhuanlan.zhihu.com/p/105403992)
+9.[Mysql的profile的使用 --- Profilling mysql的性能分析工具](https://www.cnblogs.com/sxdcgaq8080/p/11844079.html)、[MySql优化之show profile分析SQL](https://zhuanlan.zhihu.com/p/105403992)
 
 ## 日志&MVCC
 ### binlog
