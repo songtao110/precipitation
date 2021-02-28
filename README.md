@@ -65,3 +65,7 @@ Netty
 [入门Netty](https://juejin.cn/post/6896622400215220231)
 
 [Netty In Action](https://waylau.com/essential-netty-in-action/index.html)
+
+[超详细Netty入门，看这篇就够了！](https://mp.weixin.qq.com/s/Wj73aY-44MaoBuRaRR1ElQ)
+
+[Netty进阶之粘包和拆包问题](https://mp.weixin.qq.com/s/ng4uz902npl6vKSeuZKSNw)
