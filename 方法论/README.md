@@ -1,0 +1,1 @@
+1.[如何做好技术 Team Leader](https://mp.weixin.qq.com/s?__biz=MzIzOTU0NTQ0MA==&mid=2247501911&idx=1&sn=432c88da84d9d64789d388a8f3eb856d&chksm=e92af558de5d7c4e9f3adb1dfc931c9dbadb3a800b932d476b3d6b60a3b54e4696b164e415a9&scene=21#wechat_redirect)
