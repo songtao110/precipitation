@@ -93,7 +93,7 @@ class DoubleList {
 }
 ```
 
-##移动零
+## 移动零
 【移动零】(https://leetcode-cn.com/problems/move-zeroes/)
 ```
 class Solution {
