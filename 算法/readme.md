@@ -135,3 +135,19 @@ public class Solution {
     }
 }
 ```
+## 盛最多水的容器
+【盛最多水的容器】(https://leetcode-cn.com/problems/container-with-most-water/)
+```
+class Solution {
+    public int maxArea(int[] height) {
+        int maxArea = 0;
+        for(int i = 0;i<height.length - 1; i++){
+            for(int j = i+1;j<height.length; j++){
+                int area = (j - i) * Math.min(height[i],height[j]);
+                maxArea = Math.max(area,maxArea);
+            }
+        }
+        return maxArea;
+    }
+}
+```
