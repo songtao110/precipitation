@@ -150,4 +150,16 @@ class Solution {
         return maxArea;
     }
 }
+
+class Solution {
+    public int maxArea(int[] height) {
+        int maxArea = 0;
+        for(int i = 0, j = height.length - 1;i < j;){
+            int minHeight = height[i] < height[j] ? height[i++] : height[j--];
+            int tempArea = (j - i + 1) * minHeight;
+            maxArea = Math.max(maxArea,tempArea);
+        }
+        return maxArea;
+    }
+}
 ```
