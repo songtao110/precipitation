@@ -370,3 +370,38 @@ class Solution {
 }
 
 ```
+## 最小的k个数
+【最小的k个数】(https://leetcode-cn.com/problems/zui-xiao-de-kge-shu-lcof/)
+二叉大根堆的性质是：left = i * 2 + 1,right = i * 2 +2 root = (child - 1) / 2
+插入：插入到尾部，up操作
+删除：删除root,用尾部替换 down操作
+之所以使用大根堆是因为 根是最大的了，没有比根还大的了，所以下面都是小的，只要比根大就替换，始终保持K个最小的数据
+```
+class Solution {
+    public int[] getLeastNumbers(int[] arr, int k) {
+        int[] vec = new int[k];
+        if (k == 0) { // 排除 0 的情况
+            return vec;
+        }
+        PriorityQueue<Integer> queue = new PriorityQueue<Integer>(new Comparator<Integer>() {
+            public int compare(Integer num1, Integer num2) {
+                return num2 - num1;
+            }
+        });
+        for (int i = 0; i < k; ++i) {
+            queue.offer(arr[i]);
+        }
+        for (int i = k; i < arr.length; ++i) {
+            if (queue.peek() > arr[i]) {
+                queue.poll();
+                queue.offer(arr[i]);
+            }
+        }
+        for (int i = 0; i < k; ++i) {
+            vec[i] = queue.poll();
+        }
+        return vec;
+    }
+}
+
+```
