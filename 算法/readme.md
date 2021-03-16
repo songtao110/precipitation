@@ -372,6 +372,8 @@ class Solution {
 ```
 ## 最小的k个数
 【最小的k个数】(https://leetcode-cn.com/problems/zui-xiao-de-kge-shu-lcof/)
+
+类似题目：【前 K 个高频元素】https://leetcode-cn.com/problems/top-k-frequent-elements/
 二叉大根堆的性质是：left = i * 2 + 1,right = i * 2 +2 root = (child - 1) / 2
 插入：插入到尾部，up操作
 删除：删除root,用尾部替换 down操作
