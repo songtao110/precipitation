@@ -67,3 +67,5 @@ C 语言实现，一般来说，C 语言实现的程序“距离”操作系统�
 3.如果你的数据很重要，请使用 Try/Except
 5.
 ```
+## 6.redis客户端
+[剖析更高级的Redis客户端Lettuce](https://mp.weixin.qq.com/s?__biz=MzI3MTEwODc5Ng==&mid=2650860743&idx=1&sn=91742ee5f6d4b4173613d12196de9d84&chksm=f1329314c6451a025a6327b7a9f868a8cdba08af6258ebbde2ef0b0cf732103621a921be0c39&scene=21#wechat_redirect)
