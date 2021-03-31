@@ -35,3 +35,5 @@ Hotspot 虚拟机的对象头主要包括两部分数据：Mark Word（标记字
 ![对象头信息](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d71b6b702af4479f8e0185ba70b67fa5~tplv-k3u1fbpfcp-watermark.image)
 
 8.[JVM小册子](https://juejin.cn/post/6930605141280325639)
+
+9.[系统缓慢、CPU 100%、 Full GC 次数过多的排查思路](https://mp.weixin.qq.com/s/8qoptqhTPlHV69E3aC6aJQ)
