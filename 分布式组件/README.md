@@ -80,3 +80,4 @@ Saga的核心就是补偿，一阶段就是服务的正常顺序调用（数据�
 
 ### 4.5 Seata
 
+[Seate](http://seata.io/zh-cn/docs/overview/what-is-seata.html)
