@@ -20,12 +20,12 @@ TSDB(时序数据库)
 ### 2.2 Zabbix、Open-Falcon
 [Zabbix、Open-Falcon](https://www.sohu.com/a/342733264_198222)
 
-### 2.分布式一致性算法
+## 3.分布式一致性算法
 
 [分布式一致性算法 Paxos、Raft、Zab的区别与联系](https://www.cnblogs.com/bigband/p/13520586.html)
 分布式数据一致性算法（共识算法）
 
-### 强一致性
+### 3.1强一致性
 1.paxos
 2.Raft（muti-paxos） 优点是节省同步次数，如果集群中的 Leader 是非常稳定的，那么我们往往不需要准备阶段的工作，这样就能够将 RPC 的数量减少一半
 3.ZAB（muti-paxos）
@@ -36,7 +36,7 @@ TSDB(时序数据库)
 在状态复制的过程中，raft的心跳从Leader向Follower发送，而ZAB则相反。
 ```
 
-### 弱一致性（最终一致性）
+### 3.2弱一致性（最终一致性）
 4.DNS系统
 
 5.Gossip协议
