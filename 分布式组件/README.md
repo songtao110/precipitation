@@ -22,6 +22,7 @@ TSDB(时序数据库)
 
 ### 2.分布式一致性算法
 
+[分布式一致性算法 Paxos、Raft、Zab的区别与联系](https://www.cnblogs.com/bigband/p/13520586.html)
 分布式数据一致性算法（共识算法）
 
 ### 强一致性
