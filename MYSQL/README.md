@@ -16,6 +16,14 @@
 
 9.[Mysql的profile的使用 --- Profilling mysql的性能分析工具](https://www.cnblogs.com/sxdcgaq8080/p/11844079.html)、[MySql优化之show profile分析SQL](https://zhuanlan.zhihu.com/p/105403992)
 
+10.mysql的ACID分别是怎么保证的？
+```
+A原子性：靠undo log来保证（异常或执行失败后进行回滚）。
+D持久性：靠redo log来保证（保证当MySQL宕机或停电后，可以通过redo log最终将数据保存至磁盘中）。
+I隔离性：事务间的读写靠MySQL的锁机制来保证隔离，事务间的写操作靠MVCC机制（快照读、当前读）来保证隔离性。
+C一致性：事务的最终目的，即需要数据库层面保证，又需要应用层面进行保证，并且MySQL底层通过两阶段提交事务保证了事务持久化时的一致性。
+```
+
 ## 日志&MVCC
 ### binlog
 是数据库server层面基于sql语句层面记录的日志，数据库改变事件，包括事件发生的时间、开始位置、结束位置等信息。
