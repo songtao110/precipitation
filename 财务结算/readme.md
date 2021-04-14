@@ -9,3 +9,10 @@
 》Mq缓冲，达到系统可接受的一定的并发能力
 
 ```
+
+## 2.结算设计
+[在财务系统中，结算系统的组成模块是哪些](http://www.360doc.com/content/19/0710/17/28402669_847892937.shtml)
+
+[支付账务清结算系统设计干货](https://zhuanlan.zhihu.com/p/60574672)
+
+[电商财务结算系统重构实践](https://blog.csdn.net/vipshop_fin_dev/article/details/79761081)
