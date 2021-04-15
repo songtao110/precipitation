@@ -43,4 +43,12 @@ Memory Mapped Files(后面简称mmap)也被翻译成 内存映射文件 ，在64
 3.基于sendfile实现Zero Copy
 
 4.批量压缩
+
+小结：
+partition 并行处理
+顺序写磁盘，充分利用磁盘特性
+利用了现代操作系统分页存储 Page Cache 来利用内存提高 I/O 效率
+采用了零拷贝技术
+Producer 生产的数据持久化到 broker，采用 mmap 文件映射，实现顺序的快速写入
+Customer 从 broker 读取数据，采用 sendfile，将磁盘文件读到 OS 内核缓冲区后，转到 NIO buffer进行网络发送，减少 CPU 消耗
 ```
