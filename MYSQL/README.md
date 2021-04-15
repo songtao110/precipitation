@@ -83,4 +83,14 @@ mvcc的实现原理
 Master上执行了5分钟，binlog传到了slave也需要执行5分钟，那就是Slave延迟5分钟，在这期间会造成业务脏数据，比如重复下单等。
 ```
 
+## 索引优化
+[Mysql里的order by与索引](https://www.cnblogs.com/yqzc/p/12541917.html)
+```
+当order by 中的字段出现在where条件中时，才会利用索引而不排序，更准确的说，order by 中的字段在执行计划中利用了索引时，不用排序操作。
+这个结论不仅对order by有效，对其他需要排序的操作也有效。比如group by 、union 、distinct等。
+
+mysql一次查询只能使用一个索引。如果要对多个字段使用索引，建立复合索引。
+
+如果对where条件字段未建索引，只对排序字段建索引，是不会使用索引的。
+```
 
