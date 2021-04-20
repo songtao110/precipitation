@@ -100,6 +100,8 @@ mysql一次查询只能使用一个索引。如果要对多个字段使用索引
 ```
 
 ## order by执行原理
+
+[using filesort VS using temporary](http://mysql.taobao.org/monthly/2015/03/04/)
 ```
 1.当order by 不能使用索引进行排序时，将使用排序算法进行排序
 2.若排序内容全部放入内存，则仅在内存中使用快速排序
