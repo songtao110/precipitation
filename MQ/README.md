@@ -52,3 +52,12 @@ partition 并行处理
 Producer 生产的数据持久化到 broker，采用 mmap 文件映射，实现顺序的快速写入
 Customer 从 broker 读取数据，采用 sendfile，将磁盘文件读到 OS 内核缓冲区后，转到 NIO buffer进行网络发送，减少 CPU 消耗
 ```
+4.[我用kafka两年踩过的一些非比寻常的坑](https://mp.weixin.qq.com/s?__biz=MzkxMjE5NTY4MQ==&mid=2247484317&idx=1&sn=3e53094cdabfab9c40ec42106c8b763e&chksm=c111ea93f6666385d5b7df02d6ed82965d791803d8c8832e66fb0dfdc3b5aa32889bd13c7e65&mpshare=1&scene=24&srcid=0421haTaVBrtxtMtMBCNayqM&sharer_sharetime=1618968559641&sharer_shareid=b781b4c59f55ee8f91f5e266479b254f&exportkey=Aa9EVyOmHQf1rFCajqxlNIs%3D&pass_ticket=FrHlmTp2yk2o8dyk5WkyzuKGZL%2FUdU%2BnDWf%2B5RWtIjpQGlYBxiRzdTt7riT2C1Ms&wx_header=0#rd)
+
+```
+1.顺序问题，按照一定业务规则到一个分区，保证顺序，下游保证消费的失败重试。
+2.消息积压，消息体不易过大，分区规则注意热点问题
+3.大批量消息积压，增加partition数量，增加消费能力，数据库表过大，处理耗时严重，影响TPS
+4.重复消费，不使用分布式锁，可以使用 mysql的INSERT INTO ...ON DUPLICATE KEY UPDATE
+5.注意数据库主从延迟的问题
+```
