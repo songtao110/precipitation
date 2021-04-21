@@ -61,3 +61,5 @@ Customer 从 broker 读取数据，采用 sendfile，将磁盘文件读到 OS �
 4.重复消费，不使用分布式锁，可以使用 mysql的INSERT INTO ...ON DUPLICATE KEY UPDATE
 5.注意数据库主从延迟的问题
 ```
+5.下一代消息中间件
+[pulsar](http://pulsar.apache.org/docs/zh-CN/next/standalone-docker/)
