@@ -84,3 +84,9 @@ C 语言实现，一般来说，C 语言实现的程序“距离”操作系统�
 [Redis使用建议规范](https://www.jianshu.com/p/5abbee8e4564?from=groupmessage)
 [阿里云Redis使用规范](https://www.cnblogs.com/Luke-Me/p/8946134.html)
 [阿里推荐的Redis使用规范，Redis就要这么用](https://my.oschina.net/u/3077716/blog/4401828)
+
+## 8.Tair
+```
+Tair数据引擎：MDB、RDB、LDB。
+从分类上来看，MDB作为基于内存的缓存，由于数据小而简单，使用频率相对RDB来说会少很多。而由于RDB以及Redis本身的特性，tair中的RDB数据引擎应该是最受欢迎的。
+```
