@@ -1,29 +1,33 @@
-题目列表
+## 题目列表
 
-java
+### java
 容器、多线程、多线程的参数、使用场景
 锁，多种锁的机制，集合场景
 HashMap、LinkedList、TreeMap
 
-jvm
+### jvm
 GC机制、内存模型、定位问题的方法和案例、可达性分析，哪些是root节点  arthas
 
-spring、springboot、springcloud
+### spring、springboot、springcloud
 区别、特性都有哪些、启动过程源码、自动加载的原理、动态代理
 
-redis
+### redis
 数据结构、过期策略、备份、线程模型 6.0之后多线程
 
-mysql
+### mysql
 幻读、隔离级别、MVCC实现原理来实现隔离级别、redo、undo、binlog、分库分表
 
-分布式中间件
+### 分布式中间件
 mq、trace、监控、任务、rpc注册中心、es深度分页、分布式锁、全局ID
 
-分布式原理相关 分布式算法
+### 分布式原理相关 分布式算法
 cap base 
 
-多活、全部联路仿真压测
+### 多活、全部联路仿真压测
+
+### 限流、熔断、降级
+根据限流作用范围，可以分为单机限流和分布式限流；
+根据限流方式，又分为计数器、滑动窗口、漏桶限令牌桶限流
 
 
 
